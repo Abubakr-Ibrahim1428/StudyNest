@@ -1,0 +1,98 @@
+.task-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+}
+
+.task-row--done {
+  opacity: 0.55;
+}
+
+.task-check {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cyan-bright);
+  box-shadow: inset 3px 3px 6px var(--shadow-dark), inset -3px -3px 6px var(--shadow-light);
+}
+
+.task-check:hover {
+  box-shadow: inset 3px 3px 6px var(--shadow-dark), inset -3px -3px 6px var(--shadow-light),
+    0 0 10px var(--cyan-glow);
+}
+
+.task-check--done {
+  background: var(--surface);
+  box-shadow: inset 3px 3px 6px var(--shadow-dark), inset -3px -3px 6px var(--shadow-light),
+    0 0 10px var(--cyan-glow-strong);
+}
+
+.task-row__body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-row__text {
+  font-size: 0.94rem;
+  color: var(--text-primary);
+}
+
+.task-row--done .task-row__text {
+  text-decoration: line-through;
+  color: var(--text-secondary);
+}
+
+.task-row__meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.task-due {
+  font-size: 0.75rem;
+  color: var(--text-faint);
+}
+
+.priority-pill {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+
+.priority-pill--high {
+  color: var(--priority-high);
+  background: rgba(255, 111, 97, 0.1);
+  box-shadow: inset 2px 2px 5px var(--shadow-dark), inset -2px -2px 5px var(--shadow-light);
+}
+
+.priority-pill--medium {
+  color: var(--priority-medium);
+  background: rgba(255, 193, 94, 0.1);
+  box-shadow: inset 2px 2px 5px var(--shadow-dark), inset -2px -2px 5px var(--shadow-light);
+}
+
+.priority-pill--low {
+  color: var(--priority-low);
+  background: rgba(111, 224, 160, 0.1);
+  box-shadow: inset 2px 2px 5px var(--shadow-dark), inset -2px -2px 5px var(--shadow-light);
+}

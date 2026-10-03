@@ -1,9 +1,36 @@
 # StudyNest
-A simple React app that works as a note/tasklist/ToDo app for developers.
 
-# How to use
-This app consists of 4 main pages:
-1. Home, this shows a summary of your current list of tasks and their priority level ranging from low to high
-2. Notes, this is a section where you can add/edit/remove notes, you write a new one using the + icon in the top right and it will ask you to add a title, subject and the note itself, when you give it a subject, it will add a new category based on that name below the title text.
-3. Checklist which is a typical ToDo, except that you are able to set a priority level to it, which will show on the Home page.
-4. Settings, since this is an early release, it has only one setting and it is the location of the dock which you can set it to right or left.
+A neumorphic student notes + checklist app, built with Vite + React.
+
+## Run it locally
+
+```bash
+npm install
+npm run dev
+```
+
+Then open the printed local URL in your browser.
+
+## Build for production
+
+```bash
+npm run build
+```
+
+## Notes
+
+- All data (notes & tasks) is stored in your browser's localStorage — nothing leaves your machine.
+- Dock placement (left/right) is set in the Settings page.
+- Fonts (Space Grotesk + Inter) load from Google Fonts via the `<link>` tags in `index.html` — you'll need an internet connection the first time a font loads.
+
+## Deploying to GitHub Pages
+
+This repo includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that builds and deploys automatically on every push to `main`.
+
+One-time setup after pushing to GitHub:
+1. Go to your repo → **Settings → Pages**
+2. Under **Build and deployment → Source**, choose **GitHub Actions**
+3. Push to `main` (or re-run the workflow from the **Actions** tab)
+4. Your app will be live at `https://<your-username>.github.io/studynest/`
+
+If you rename the repo to something other than `studynest`, update the `base` value in `vite.config.js` to match (`/your-repo-name/`).

@@ -1,0 +1,95 @@
+.dock {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 84px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding: 22px 0;
+  background: var(--bg);
+  z-index: 20;
+}
+
+.dock--left {
+  left: 0;
+  box-shadow: 8px 0 20px rgba(0, 0, 0, 0.35);
+}
+
+.dock--right {
+  right: 0;
+  box-shadow: -8px 0 20px rgba(0, 0, 0, 0.35);
+}
+
+.dock__brand {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--cyan);
+  letter-spacing: 0.04em;
+}
+
+.dock__items {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dock__btn {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  color: var(--text-secondary);
+}
+
+.dock__btn:hover {
+  color: var(--cyan-bright);
+  box-shadow:
+    4px 4px 10px var(--shadow-dark),
+    -4px -4px 10px var(--shadow-light),
+    0 0 14px var(--cyan-glow);
+}
+
+.dock__btn:active {
+  transform: scale(0.94);
+}
+
+.dock__btn--active {
+  background: var(--surface);
+  color: var(--cyan-bright);
+  box-shadow:
+    inset 3px 3px 8px var(--shadow-dark),
+    inset -3px -3px 8px var(--shadow-light),
+    0 0 16px var(--cyan-glow-strong);
+}
+
+.dock__label {
+  font-size: 0.58rem;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .dock {
+    width: 68px;
+  }
+  .dock__btn {
+    width: 46px;
+    height: 46px;
+  }
+  .dock__label {
+    display: none;
+  }
+}

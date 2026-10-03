@@ -1,0 +1,97 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.field input,
+.field textarea,
+.field select {
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 11px 13px;
+  font-size: 0.92rem;
+  background: var(--surface);
+  color: var(--text-primary);
+  box-shadow: inset 3px 3px 7px var(--shadow-dark), inset -3px -3px 7px var(--shadow-light);
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--text-faint);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 90px;
+  font-family: var(--font-body);
+}
+
+.field-row {
+  display: flex;
+  gap: 12px;
+}
+
+.field-row .field {
+  flex: 1;
+}
+
+.btn-primary {
+  align-self: flex-start;
+  padding: 11px 22px;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--cyan-bright);
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 4px 4px 10px var(--shadow-dark), -4px -4px 10px var(--shadow-light);
+}
+
+.btn-primary:hover {
+  box-shadow: 4px 4px 10px var(--shadow-dark), -4px -4px 10px var(--shadow-light), 0 0 16px var(--cyan-glow-strong);
+}
+
+.btn-primary:active {
+  transform: scale(0.97);
+  box-shadow: inset 3px 3px 8px var(--shadow-dark), inset -3px -3px 8px var(--shadow-light);
+}
+
+.btn-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+
+.btn-icon:hover {
+  color: var(--priority-high);
+  box-shadow: 0 0 10px rgba(255, 111, 97, 0.35);
+}
+
+.fab {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cyan-bright);
+  box-shadow: 5px 5px 12px var(--shadow-dark), -5px -5px 12px var(--shadow-light);
+}
+
+.fab:hover {
+  box-shadow: 5px 5px 12px var(--shadow-dark), -5px -5px 12px var(--shadow-light), 0 0 18px var(--cyan-glow-strong);
+}
+
+.fab:active {
+  transform: scale(0.95);
+}
